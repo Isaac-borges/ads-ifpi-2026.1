@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link id="tema" rel="stylesheet" href="mini-blog-color-default.css">
+        <title>Mini blog de tecnologia</title>
+    </head>
+    <body>
+        <h1>Mini Blog de Tecnologia</h1>
+        <h2>Título do post</h2>
+        <p>conteúdo do post </p>
+        <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
+        <p class="separador">&#9733; &#9733; &#9733; </p>
+
+        <h2>O Rust como uma linguagem emergente</h2>
+        <p>O Rust tem se destacado no cenário tecnológico por resolver um dilema histórico da computação: a escolha entre performance e segurança. Diferente de linguagens que oferecem controle total sobre o hardware mas são suscetíveis a erros de memória, o Rust introduz um sistema rigoroso de Ownership e Borrowing. Esse mecanismo garante a segurança da memória em tempo de compilação, eliminando bugs comuns sem a necessidade de um Garbage Collector, o que a torna ideal para sistemas críticos e infraestruturas de alto desempenho.<br><br>
+        Além da robustez técnica, a ascensão do Rust é impulsionada por uma excelente experiência de desenvolvimento e ferramentas modernas como o Cargo. A linguagem facilita a criação de sistemas modulares e eficientes, permitindo que grandes empresas do setor a adotem em seus núcleos de operação. Com isso, o Rust se consolida não apenas como uma tendência, mas como um novo padrão para o desenvolvimento de software onde a eficiência energética e a confiabilidade são requisitos fundamentais.</p>
+        <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
+        <p class="separador">&#9733; &#9733; &#9733; </p>
+        
+        <br><br>
+        <p>Tema Padrão: <button onclick="mudarTema(0)">Escolher </button></p>
+        <p>Tema Gameboy: <button onclick="mudarTema(1)">Escolher</button></p>
+        <p>Tema Preto e Branco: <button onclick="mudarTema(2)">Escolher</button></p>
+
+        <script>
+            function mudarTema(id){
+                const link_tema = document.getElementById('tema');
+                switch (id){
+                    case 0:
+                        link_tema.setAttribute('href', 'mini-blog-color-default.css');
+                        break;
+                    case 1: 
+                        link_tema.setAttribute('href', 'mini-blog-green-palette.css');
+                        break;
+                    case 2: 
+                        link_tema.setAttribute('href', 'mini-blog-black-white.css');
+                        break;
+                    default: 
+                        break;
+                } 
+            }
+        </script>
+    </body>
+</html>

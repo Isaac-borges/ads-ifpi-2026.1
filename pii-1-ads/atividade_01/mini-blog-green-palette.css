@@ -1,0 +1,24 @@
+body {
+    background-color: #E0F8D0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #88C070;
+    text-align: center;
+    background-color: #081820;
+}
+
+h2 {
+    color: #346856;
+}
+
+.autor {
+    background-color: #88C070;
+    text-align: right ;
+}
+
+.separador {
+    text-align: center;
+    color: #346856;
+}

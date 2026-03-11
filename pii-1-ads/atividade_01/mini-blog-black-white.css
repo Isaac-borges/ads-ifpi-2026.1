@@ -1,0 +1,29 @@
+body {
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    background-color: #666;
+}
+
+h2 {
+    color: #FFF;
+}
+
+p {
+    color: #AAA;
+}
+
+.autor {
+    color: #000;
+    background-image: linear-gradient(to right, #000 10%, #FFF 90%) ;
+    text-align: right ;
+}
+
+.separador {
+    text-align: center;
+    color: #FFF;
+}
