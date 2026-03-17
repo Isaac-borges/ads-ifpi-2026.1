@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include "arv.h"
+
+typedef int Item;
+typedef struct arv {
+    struct arv *esq;
+    Item item;
+    struct arv *dir;
+} *Arv;
+
+Arv arv(Arv e, Item x, Arv d)
+{
+    Arv n = malloc(sizeof(struct arv));
+    n->esq = e;
+    n->item = x;
+    n->dir = d;
+
+    return n;
+}
+
+Arv dir_arv(Arv A)
+{
+    return A->dir;
+}
+
+Arv esq_arv(Arv A)
+{
+    return A->esq;
+}
+
+Item item_arv(Arv A)
+{
+    return A->item;
+}
+
+void emordem(Arv A)
+{
+    if (A == NULL) return;
+    emordem(A->esq);
+    fprintf(stdout, "%d ", A->item);
+    emordem(A->dir);
+}
+
+void preordem(Arv A)
+{
+    if (A == NULL) return;
+
+    fprintf(stdout, "%d ", A->item);
+    preordem(A->esq);
+    preordem(A->dir);
+}
+
+void posordem(Arv A)
+{
+    if (A == NULL) return;
+    posordem(A->esq);
+    posordem(A->dir);
+    fprintf(stdout, "%d ", A->item);
+}
+
+void destroi(Arv *A)
+{
+    if (*A == NULL) return;
+    destroi(&(*A)->esq);
+    destroi(&(*A)->dir);
+    free(*A);
+    *A = NULL;
+}
+
+void ins(Item x, Arv *A)
+{
+    if (*A == NULL) *A = arv(NULL, x, NULL);
+    else if (x <= (*A)->item) ins (x, &(*A)->esq);
+    else ins(x, &(*A)->dir);
+}
+
+bool busca (Item x, Arv A)
+{
+    if (A == NULL) return false;
+    if (x == A->item) return true;
+    if (x <= A->item) return busca(x, A->esq);
+    else return busca(x, A->dir);
+}
+
+Item remmax(Arv *A)
+{
+    if(*A == NULL) abort();
+    while ((*A)->dir != NULL) A = &(*A)->dir;
+    Arv n = *A;
+    Item x = n->item;
+    *A = n->esq;
+    free(n);
+    return x;
+}
+
+void rem(Item x, Arv *A)
+{
+    if (*A == NULL) return;
+    if (x == (*A)->item)
+    {
+        Arv n = *A;
+        if (n->esq == NULL) *A = n->dir;
+        else if (n->dir == NULL) *A = n->esq;
+        else n->item = remmax(&n->esq);
+        if (n != *A) free(n);
+    }
+
+    else if (x <= (*A)->item) rem(x, &(*A)->esq);
+    else rem(x, &(*A)->dir);
+}
