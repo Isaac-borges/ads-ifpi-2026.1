@@ -22,3 +22,7 @@ h2 {
     text-align: center;
     color: #346856;
 }
+
+p {
+    font: 'Nerd Font';
+}

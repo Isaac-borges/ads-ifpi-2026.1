@@ -1,0 +1,64 @@
+/*
+#ECEFF4
+*/
+
+.checklist {
+    color: #ECEFF4;
+    max-width: 400px;
+    margin: auto;
+    list-style-position: outside;
+    list-style: decimal-leading-zero;
+
+    li {
+        background: #141820;
+        border-radius: 12px;
+        padding: 1px 1px;
+        margin: 5px 5px 5px 5px;
+        transition: 0.2s;
+    }
+
+    li:hover {
+        transform: translateY(-3px); 
+        background: #394356;
+    }
+}
+
+
+
+
+.item-ol {
+    li {
+        background: inherit;
+    };
+
+    li:first-child {
+        color:#81A1C1;
+        font-weight: 900;
+        list-style: ">  ";
+    }
+
+    li:not(:first-child) {
+        list-style: "  > ";
+    }
+
+    li:hover {
+        transform: translate(0px);
+    }
+} 
+
+html {
+    font-family: "Hack";
+}
+
+body {
+    background-color: #2E3440
+}
+
+p {
+    color: #ECEFF4;
+}
+
+h3 {
+    color: #81A1C1;
+}
+
