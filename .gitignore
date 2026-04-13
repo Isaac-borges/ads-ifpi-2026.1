@@ -3,3 +3,7 @@
 .vscode
 *.exe
 *.png
+.clangd
+*.txt
+.vscode
+*.json
