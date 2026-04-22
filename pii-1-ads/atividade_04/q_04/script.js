@@ -8,3 +8,11 @@ botao.addEventListener("click", function() {
     // altere o texto do parágrafo
     paragrafo.innerText= "O texto deste parágrafo foi alterado!";
 });
+
+let botao_limpar = document.getElementById("clear");
+
+botao_limpar.addEventListener("click", () =>
+{
+    let paragrafo = document.getElementById("paragrafo");
+    paragrafo.innerText = "";
+});

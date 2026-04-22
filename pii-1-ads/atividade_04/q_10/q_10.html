@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculadora</title>
+    <script src="q_10.js" defer></script>
+    <style>
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <h2>Operandos</h2>
+    <input type="number" id="operando1">
+    <input type="number" id="operando2"> 
+    <h2>Operações</h2>
+    <div id="operacoes">
+        <input type="radio" name="operacao" value="adicao" checked> Adição
+        <input type="radio" name="operacao" value="subtracao"> Subtração
+        <input type="radio" name="operacao" value="multiplicacao"> Multiplição
+        <input type="radio" name="operacao" value="divisao"> Divisão
+    </div>
+    <br><br>
+    <button id="calc">Calcular</button>
+    <br><br>
+
+    <div id="resultado"></div>
+</body>
+</html>
