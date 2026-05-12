@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de engajamento</title>
+    <script src="scripts.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calcular engajamento da postagem</h1>
+
+    <fieldset for="dados_postagem">
+        <label for="interacoes">Número de Interações (Curtidas, Comentários, Compartilhamentos): </label>
+        <input id="interacoes"><br>
+        <label for="visualizacoes">Número de visualizações: </label>
+        <input id="visualizacoes"><br>
+        <button id="botao_calculo">Calcular</button><div id="show_errors">&ThickSpace; </div><br>
+    </fieldset>
+
+    <fieldset for="engajamento_postagem" class="container_engajamento">
+        <p id="resultado"></p>
+    </fieldset>
+</body>
+</html>

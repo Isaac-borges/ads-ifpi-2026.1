@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" src="styles.css">
+</head>
+<body>
+    <h1>Cadastro de tarefas</h1>
+    <fieldset title="Dados da tarefa">
+        <label for="descricao">Descrição: </label>
+        <input id="descricao">
+        <label for="status">Status: </label>
+        <select id="status">
+            <option value="Aguardando" selected>Aguardando</option>
+            <option value="Iniciada" disabled>Iniciada</option>
+            <option value="Concluída" disabled>Concluída</option>
+        </select>  
+        <button id="cadastrar">Cadastrar</button>
+    </fieldset>
+    <table id="tarefas">
+        <tr>
+            <th>#</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Início</th>
+            <th>Conclusão</th>
+            <th>Ações</th>
+        </tr>
+
+    </table>
+</body>
+</html>
